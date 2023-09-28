@@ -150,9 +150,7 @@ Taken from [@huste_2023]
 ## {background-iframe="https://sqaaas.eosc-synergy.eu/#/" background-interactive=true}
 
 
-##
-
-Producing reliable, reproducible, and maintainable code 
+## Producing reliable, reproducible, and maintainable code (chatGPT)
 
 :::::: {.panel-tabset .small}
 
