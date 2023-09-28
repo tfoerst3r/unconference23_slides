@@ -1,0 +1,324 @@
+---
+title: Coding in Science
+subtitle: Balancing Time and Sustainability
+author: Thomas Förster and Jan Philipp Dietrich
+date: 09/28/2023
+institute: Potsdam Institute for Climate Impact Research and HZDR
+format:
+  revealjs:
+    theme: ./custom/themes/default.scss
+    transition: none
+    transition-speed: fast
+    slide-number: false
+    #slide-number: c
+    width: 1920
+    heigth: 1080
+    show-notes: false
+    html-math-method: katex
+    toc: false
+    menu: false
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    citation-hover: true
+    footnote-hover: true
+bibliography: ./ref.bib
+link-citations: true
+logo: ./custom/images/logo-rse-de.svg
+footer: "Coding in Science: Balancing Time and Sustainability by Jan Philipp Dietrich and Thomas Förster -- 28.09.2023"
+reference-location: document
+---
+
+## Who are we?
+<style>
+.reveal .footer {
+    bottom: 0rem !important;
+}
+</style>
+
+
+:::::: columns
+::: column
+Thomas 
+
+![](./images/profil-thomas.jpg){width=35%} ![](./images/logo-consulting.svg){width=60%}
+
+- Working as a Software Consultant at HZDR for the HIFIS Initiative
+:::
+
+::: column
+Jan
+
+![](./images/profil-jan.jpg){width=35%} ![](./images/logo-pik.png){width=35%}
+
+- Lead of research software development at the Land-Use Management group
+:::
+:::::::
+
+<!--
+## Check In
+
+- Group up in pairs of 2 (sb. unknown to you)
+
+![](./images/pairing.gif){style="margin-left:20%; width:20%;"}
+
+- Tell your counterpart in 2&nbsp;min what project you have been working which need some kind of balancing.
+-->
+
+
+## Balancing Time and Sustainability 
+
+:::::: columns
+<!---- column ---->
+::: {.column width=32%}
+
+- Your Best Practices in Software Engineering?
+- The Minimum Requirements for RSE Projects?
+- The Right Balance in Your RSE Project?
+- [Link to the PAD](https://pad.gwdg.de/OmEzvaIaS5mFXeJHJMtpRg#)
+
+:::
+
+<!---- column ---->
+::: column
+
+<center>
+![](images/summary.svg)
+</center>
+:::
+::::::
+
+## {background-iframe="https://notes.desy.de/s/ucjYyQA8Y"}
+
+## {background-iframe="https://slides.com/jandietrich/rse-effort-vs-impact/fullscreen"}
+
+
+## Talking to my colleagues 
+
+- What are your Requirements?
+- Numerous factors need to be considered when working with software project.
+
+::: {style="width:110%; zoom:4.0; margin-left:-3%; margin-top:-5%;"}
+```{mermaid}
+flowchart TB
+  A(Software Project)
+  
+  B2(Maturity)
+  B1(Complexity)
+  B3(Scientific Community)
+  B4(Ecosystem)
+  B5(Audience)
+  B6(Risks due Failure)
+
+  B1C1(Technical Aspects)
+  B1C2(Managment)
+
+      
+  A  --- B1
+  A  --- B2
+  A  --- B3
+  A  --- B4
+  A  --- B5
+  A  --- B6
+ 
+  B1 --- B1C1
+  B1 --- B1C2
+```
+:::
+
+## Categories by DLR[^1] and HZDR[^2]
+
+Taken from [@huste_2023]
+
+::: {.tiny .middle}
+
+| Anwendungsklassen | 0                                                                       | 1                                                                                                                                                | 2                                                                                                  | 3                                                                      |
+| :----               | :----                                                                   | :----                                                                                                                                            | :----                                                                                              | :----                                                                  |
+| Entwicklung         | am HZDR                                                                 | am HZDR                                                                                                                                          | am HZDR oder mit Dritten                                                                           | am HZDR oder mit Dritten                                               |
+| Nutzung             | Persönlich und intern im Projekt-Team.                                  | am HZDR                                                                                                                                          | Als längerfristig verwertbares Ergebnis aus Drittmittelprojekten oder als Produkt geplant.  | Produktcharakter bzw. Software für Services (z.B. Cloud Plattform)     |
+| Anforderung         | Beachtung rechtlicher Aspekte, Versions- kontrollsystem wird verwendet. | Versionskontroll- system und „Good SW Practice“ wer- den verwendet. Da- durch ist für Unbe- teiligte am HZDR die Weiterentwick- lung möglich. | Wartbarkeit und Verwertbarkeit sind gegeben. Nutzungs- und Verwertungsrechte liegen beim HZDR | Testautomatisier- ung, Release- und Wartungs- management sind gegeben. |
+| Weitergabe geplant? | außerhalb des Entwicklungs- Teams nicht vorgesehen.                     | Nur in eng begrenztem Rahmen z.B. im Institut oder an die Einrichtung der Betreuer:innen und dann mit Lizenz.                              | Ja, mit Lizenz (OSS oder proprietär).                                                              | Ja, mit Lizenz (OSS oder proprietär).                                  |
+:::
+
+[^1]: @schlauch_2018
+[^2]: @huste_2023
+
+## {background-iframe="https://sqaaas.eosc-synergy.eu/#/" background-interactive=true}
+
+
+##
+
+Producing reliable, reproducible, and maintainable code 
+
+:::::: {.panel-tabset .small}
+
+### Version Control
+
+::: {.darkblue .smaller}
+- Use a version control system (e.g., Git) to track changes in your code.
+- Maintain a clear and descriptive commit history.
+:::
+
+### Documentation
+
+::: {.darkblue .smaller}
+- Write thorough documentation for your code, including README files, inline comments, and docstrings.
+- Include instructions for installation, usage, and troubleshooting.
+:::
+
+### Testing
+
+::: {.darkblue .smaller}
+- Write unit tests to ensure that individual components of your code work as expected.
+- Implement integration tests to verify the interaction between different parts of your software.
+- Use continuous integration (CI) tools to automatically run tests on each code update.
+:::
+
+### Reproducibility
+
+::: {.darkblue .smaller}
+- Create a reproducible environment for your software by using tools like virtual environments or containers (e.g., Docker).
+- Record dependencies in a requirements.txt or environment.yml file.
+:::
+
+### Coding Style
+
+::: {.darkblue .smaller}
+- Adhere to a consistent coding style guide (e.g., PEP 8 for Python) to improve code readability.
+- Use meaningful variable and function names.
+:::
+
+### Modularity
+
+::: {.darkblue .smaller}
+- Break your code into small, reusable modules or functions to promote maintainability and code reusability.
+:::
+
+### Error Handling
+
+::: {.darkblue .smaller}
+- Implement robust error handling to handle unexpected situations gracefully.
+- Log errors and exceptions for debugging and troubleshooting.
+:::
+
+### Data Management
+
+::: {.darkblue .smaller}
+-  If your research involves data, establish proper data management practices, including data cleaning and versioning.
+:::
+
+### Security
+
+::: {.darkblue .smaller}
+- Follow security best practices to protect your code and data, especially when handling sensitive information.
+- Keep libraries and dependencies up to date to patch known vulnerabilities.
+:::
+
+### Collaboration
+
+::: {.darkblue .smaller}
+- Foster a collaborative development environment by using tools like issue trackers (e.g., GitHub Issues) and code review systems (e.g., GitHub Pull Requests).
+:::
+
+### Licensing
+
+::: {.darkblue .smaller}
+- Choose an appropriate open-source license for your software to clarify how others can use and distribute it.
+:::
+
+### Performance Optimization
+
+::: {.darkblue .smaller}
+- Profile your code to identify performance bottlenecks and optimize critical sections.
+- Use appropriate data structures and algorithms.
+:::
+
+### Versioning
+
+::: {.darkblue .smaller}
+- Apply version numbers to your software releases (e.g., Semantic Versioning) to manage changes and updates.
+:::
+
+### Backup and Data Preservation
+
+::: {.darkblue .smaller}
+- Regularly back up your code and data to prevent data loss.
+- Consider long-term data preservation strategies for research data.
+:::
+ 
+### Community Engagement
+
+::: {.darkblue .smaller}
+- Engage with the research software engineering community, attend conferences, and share your code and experiences.
+:::
+ 
+### Ethical Considerations
+
+::: {.darkblue .smaller}
+- Consider ethical implications in your research, including data privacy, bias, and responsible AI practices.
+:::
+
+### User Support
+
+::: {.darkblue .smaller}
+- Provide support for users of your research software, such as a dedicated email address or forum for questions and issues.
+:::
+
+### Continuous Improvement
+
+::: {.darkblue .smaller}
+- Continuously review and improve your code based on feedback and evolving research requirements.
+:::
+
+### Citation and Recognition
+
+::: {.darkblue .smaller}
+- Encourage proper citation of your software in academic publications and consider seeking recognition for your contributions.
+:::
+
+### Accessibility and Inclusivity
+
+::: {.darkblue .smaller}
+- Make your software accessible to a wide audience by considering diverse user needs and ensuring compatibility with assistive technologies.
+:::
+::::::
+
+
+## Group work 
+
+<p style="margin-top:-20rem;"></p>
+
+:::::: columns 
+::: column
+Split up in groups of up to 4 people
+
+:::
+::: column
+![](./images/2groups.gif){style="width:60%"}
+:::
+::::::
+
+
+<p style="margin-top:-20rem;">
+Questions:
+
+- What are your sensible requirements for different categories (20')
+    - Define a use case.
+    - Define the requirements of this use case.
+- How to create incentive to apply the requirements (15')
+
+
+
+## References
+
+**Further Reading**
+
+- @dlr_2023
+- @squaas_2023
+
+::: {#refs}
+:::
+
+
+- SQAaaS
