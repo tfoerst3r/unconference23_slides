@@ -28,7 +28,10 @@ link-citations: true
 logo: ./custom/images/logo-rse-de.svg
 footer: "Coding in Science: Balancing Time and Sustainability by Jan Philipp Dietrich and Thomas Förster -- 28.09.2023"
 reference-location: document
+nocite: |
+  @dlr_2023, @sqaaas_2023
 ---
+
 
 ## Who are we?
 <style>
@@ -310,15 +313,8 @@ Questions:
 
 
 
-## References
-
-**Further Reading**
-
-- @dlr_2023
-- @squaas_2023
+## Literature and Further Reading
 
 ::: {#refs}
 :::
 
-
-- SQAaaS
